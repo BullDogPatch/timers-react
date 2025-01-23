@@ -10,7 +10,10 @@ const CleanTimer = () => {
       setCount((c) => c + 1);
     }, 1000);
 
-    return () => clearInterval(interval);
+    return () => {
+      console.log('This log is clearing the timer and cleaning up');
+      clearInterval(interval);
+    };
   });
 
   return <p>{count}</p>;
