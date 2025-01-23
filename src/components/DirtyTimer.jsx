@@ -6,9 +6,9 @@ const DirtyTimer = () => {
   useEffect(() => {
     console.log('Dirty timer component');
     setInterval(() => {
-      setCount(count + 1);
+      setCount((c) => c + 1);
     }, 1000);
-  }, [count]);
+  }, []);
 
   return <p>{count}</p>;
 };
